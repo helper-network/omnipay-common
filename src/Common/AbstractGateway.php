@@ -264,6 +264,66 @@ abstract class AbstractGateway implements GatewayInterface
         return method_exists($this, 'updateCard');
     }
 
+	/**
+	 * Supports CreateBank
+	 *
+	 * @return boolean True if this gateway supports the create() method
+	 */
+	public function supportsCreateBank()
+	{
+		return method_exists($this, 'createBank');
+	}
+
+	/**
+	 * Supports DeleteBank
+	 *
+	 * @return boolean True if this gateway supports the delete() method
+	 */
+	public function supportsDeleteBank()
+	{
+		return method_exists($this, 'deleteBank');
+	}
+
+	/**
+	 * Supports UpdateBank
+	 *
+	 * @return boolean True if this gateway supports the update() method
+	 */
+	public function supportsUpdateBank()
+	{
+		return method_exists($this, 'updateBank');
+	}
+
+	/**
+	 * Supports CreateCustomer
+	 *
+	 * @return boolean True if this gateway supports the create() method
+	 */
+	public function supportsCreateCustomer()
+	{
+		return method_exists($this, 'createBank');
+	}
+
+	/**
+	 * Supports DeleteCustomer
+	 *
+	 * @return boolean True if this gateway supports the delete() method
+	 */
+	public function supportsDeleteCustomer()
+	{
+		return method_exists($this, 'deleteBank');
+	}
+
+	/**
+	 * Supports UpdateCustomer
+	 *
+	 * @return boolean True if this gateway supports the update() method
+	 */
+	public function supportsUpdateCustomer()
+	{
+		return method_exists($this, 'updateBank');
+	}
+
     /**
      * Create and initialize a request object
      *

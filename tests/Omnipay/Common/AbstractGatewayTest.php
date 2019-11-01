@@ -9,6 +9,7 @@ use Omnipay\Tests\TestCase;
 
 class AbstractGatewayTest extends TestCase
 {
+	/** @var AbstractGateway $gateway */
 	private $gateway;
     public function setUp(): void
     {
@@ -138,6 +139,36 @@ class AbstractGatewayTest extends TestCase
     {
         $this->assertFalse($this->gateway->supportsUpdateCard());
     }
+
+	public function testSupportsCreateBank()
+	{
+		$this->assertFalse($this->gateway->supportsCreateBank());
+	}
+
+	public function testSupportsDeleteBank()
+	{
+		$this->assertFalse($this->gateway->supportsDeleteBank());
+	}
+
+	public function testSupportsUpdateBank()
+	{
+		$this->assertFalse($this->gateway->supportsUpdateBank());
+	}
+
+	public function testSupportsCreateCustomer()
+	{
+		$this->assertFalse($this->gateway->supportsCreateCustomer());
+	}
+
+	public function testSupportsDeleteCustomer()
+	{
+		$this->assertFalse($this->gateway->supportsDeleteCustomer());
+	}
+
+	public function testSupportsUpdateCustomer()
+	{
+		$this->assertFalse($this->gateway->supportsUpdateCustomer());
+	}
 
     public function testSupportsAcceptNotification()
     {
