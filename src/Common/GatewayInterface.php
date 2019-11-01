@@ -32,6 +32,12 @@ namespace Omnipay\Common;
  *         Generally can only be called up to 24 hours after submitting a transaction
  * @method \Omnipay\Common\Message\RequestInterface createCard(array $options = array())              (Optional method)
  *         The returned response object includes a cardReference, which can be used for future transactions
+ * @method \Omnipay\Common\Message\RequestInterface createBank(array $options = array())              (Optional method)
+ *         The returned response object includes a bankReference, which can be used for future transactions
+ * @method \Omnipay\Common\Message\RequestInterface updateBank(array $options = array())              (Optional method)
+ *         Update a stored bank
+ * @method \Omnipay\Common\Message\RequestInterface deleteBank(array $options = array())              (Optional method)
+ *         Delete a stored bank
  * @method \Omnipay\Common\Message\RequestInterface updateCard(array $options = array())              (Optional method)
  *         Update a stored card
  * @method \Omnipay\Common\Message\RequestInterface deleteCard(array $options = array())              (Optional method)
