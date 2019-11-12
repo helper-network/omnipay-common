@@ -248,15 +248,15 @@ class CreditCard
         }
 
         if ($this->getExpiryDate('Ym') < gmdate('Ym')) {
-            throw new InvalidCreditCardException('Card has expired');
+            throw new InvalidCreditCardException('Card has expired.');
         }
 
         if (!Helper::validateLuhn($this->getNumber())) {
-            throw new InvalidCreditCardException('Card number is invalid');
+            throw new InvalidCreditCardException('Card number is invalid.');
         }
 
         if (!is_null($this->getNumber()) && !preg_match('/^\d{12,19}$/i', $this->getNumber())) {
-            throw new InvalidCreditCardException('Card number should have 12 to 19 digits');
+            throw new InvalidCreditCardException('Card number should have 12 to 19 digits.');
         }
     }
     /**
