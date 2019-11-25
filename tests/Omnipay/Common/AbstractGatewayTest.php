@@ -208,6 +208,10 @@ class AbstractGatewayTest_MockAbstractGateway extends AbstractGateway
     {
         return $this->createRequest($class, $parameters);
     }
+
+    public function getStatus() {
+		return 'submitted';
+	}
 }
 
 class AbstractGatewayTest_MockAbstractRequest extends AbstractRequest
