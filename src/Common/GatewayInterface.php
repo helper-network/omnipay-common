@@ -91,4 +91,10 @@ interface GatewayInterface
      * @return array
      */
     public function getParameters();
+
+	/**
+	 * Get the status (submitted, settled) of the transaction.
+	 * @return mixed
+	 */
+    public function getStatus();
 }
