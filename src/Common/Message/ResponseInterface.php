@@ -56,6 +56,13 @@ interface ResponseInterface extends MessageInterface
 	 */
 	public function getAmount();
 
+	/**
+	 * Response Status
+	 *
+	 * @return null|float The status of the transaction.
+	 */
+	public function getStatus();
+
     /**
      * Response code
      *

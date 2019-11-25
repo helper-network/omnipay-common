@@ -127,6 +127,12 @@ class AbstractResponseTest extends TestCase
 		$this->response = m::mock('\Omnipay\Common\Message\AbstractResponseTest_MockRedirectResponse')->makePartial();
 		$this->assertEquals(1.34, $this->response->getAmount());
 	}
+
+	public function testGetStatus()
+	{
+		$this->response = m::mock('\Omnipay\Common\Message\AbstractResponseTest_MockRedirectResponse')->makePartial();
+		$this->assertEquals('settled', $this->response->getStatus());
+	}
 }
 
 class AbstractResponseTest_MockRedirectResponse extends AbstractResponse implements RedirectResponseInterface
@@ -153,6 +159,10 @@ class AbstractResponseTest_MockRedirectResponse extends AbstractResponse impleme
 
     public function getAmount() {
 		return 1.34;
+	}
+
+	public function getStatus() {
+		return 'settled';
 	}
 
 	public function getRedirectMethod() {}
